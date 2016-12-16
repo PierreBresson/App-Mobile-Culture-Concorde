@@ -1,0 +1,32 @@
+page-share-modal {
+  .artwork {
+    border-radius: 2%;
+  }
+  a {
+    font-size: 2em;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  a {
+    ion-icon {
+      font-size: 0.9em;
+    }
+  }
+  p {
+    font-size: 2em;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  p {
+    ion-icon {
+      font-size: 0.9em;
+    }
+  }
+  ion-icon {
+    display: inline-block;
+    font-size: 3em;
+    margin-right: 0.4em;
+  }
+}

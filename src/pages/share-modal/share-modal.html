@@ -1,0 +1,20 @@
+<ion-content padding (click)="close()" [style.background-color]="backgroudcolor">
+<ion-grid>
+  <ion-row text-center>
+    <ion-col>
+      <img class="artwork" src="{{track.artwork_url}}">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <b><a [style.color]="textcolor" href="{{track.permalink_url">Soundcloud <ion-icon name="link"></ion-icon></a></b>
+      <b><p [style.color]="textcolor">Share</p></b>
+      <ion-icon [style.color]="textcolor" name="logo-facebook"></ion-icon>
+      <ion-icon [style.color]="textcolor" name="logo-twitter"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

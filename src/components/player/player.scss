@@ -1,0 +1,23 @@
+player {
+  ion-icon {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(74, 74, 74);
+  }
+  .controls {
+    color: #888;
+  }
+  .playpause {
+    font-size: 7rem;
+  }
+}
+player {
+  .controls {
+    font-size: 5.5rem;
+    color: #000;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+}

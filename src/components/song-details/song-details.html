@@ -1,0 +1,16 @@
+<ion-grid>
+  <ion-row text-center>
+    <ion-col>
+      <img class="artwork" src="{{song.artwork_url}}">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row text-center>
+    <ion-col>
+      <b><p>{{song.artist | truncate }}</p></b>
+      <b><p [style.color]="dynamicColor">{{song.title | truncate }}</p></b>
+    </ion-col>
+  </ion-row>
+</ion-grid>
