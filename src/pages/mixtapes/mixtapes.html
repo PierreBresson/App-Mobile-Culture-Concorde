@@ -1,11 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Funky House playlist</ion-title>
+    <ion-title>{{header}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2 text-center>Mixtapes playlist</h2>
-  <song-details [song]="track" (click)="openMinimalPlayer()"></song-details>
-  <player (controls)=action($event)></player>
+  <song-details [song]="track" [dynamicColor]="trackColor" (click)="openMinimalPlayer()"></song-details>
+  <player (controls)=action($event) [icon]="currentIconState"></player>
 </ion-content>

@@ -16,46 +16,56 @@ import { Vibrant } from '../../providers/vibrant';
   providers: [SoundcloudPlayer, Vibrant]
 })
 export class ChillPage {
+  public header: string = "Chillwave playlist";
+  private name: string = "Chillwave playlist";
 
   public track: Track;
   private tracks: Track[];
   private colors: any;
   public trackColor: string;
 
-  private isPlaying: boolean;
   private canChange: boolean = true;
 	private playTrack: number = 0;
+  public currentIconState: string = "play";
 
 	private streamUrl: string = "http://api.soundcloud.com/";
 	private soundcloudEND: string = "?client_id=HERE";
 
   constructor(public nav: NavController, public param: NavParams, public modalCtrl: ModalController, private soundcloudplayer: SoundcloudPlayer, public vibrant: Vibrant) {
-    this.tracks= param.data;
-    this.isPlaying = false;
+    this.tracks = param.data;
 		var _this = this;
 		soundManager.setup({ preferFlash: false, debugMode: false, useHTML5Audio: true,
 			onready: function() {},
 			defaultOptions: {
 				onfailure: function() { _this.next(); },
-				onfinish: function() { _this.next(); }
+				onfinish: function() { _this.next(); },
+        onload: function() {
+          _this.header = _this.name;
+        },
+        onplay: function() {
+          _this.header = "Loading...";
+        }
 			}
 		});
 		this.track = {
 			id: 0, title: 'Fetching tracks...', artwork_url: 'assets/data/artwork.jpg',
       permalink_url: '', artist:'Please wait a little :)'
 		};
-    this.trackColor = "#000";
   }
 
   ionViewWillEnter() {
+    this.trackColor = "#000";
     this.tracks = this.soundcloudplayer.shuffle(this.tracks);
     this.track = this.tracks[0];
-    this.loadAndPlay(this.track.id);
+    this.load(this.track.id);
     this.giveMeColors(this.track.artwork_url);
+    this.currentIconState = "play";
   }
 
   ionViewWillLeave() {
-    this.leave();
+    soundManager.pause("sound");
+    soundManager.unload("sound");
+    soundManager.destroySound("sound");
   }
 
   giveMeColors(url: string){
@@ -71,25 +81,20 @@ export class ChillPage {
     });
   }
 
-  loadAndPlay(trackID: number){
+  load(trackID: number){
     let url = this.streamUrl + "tracks/" + trackID + "/stream" + this.soundcloudEND;
     soundManager.createSound({ id: "sound", url: url });
-    soundManager.play("sound");
     this.canChange=true;
-  }
-
-  leave(){
-    soundManager.pause("sound");
-    soundManager.unload("sound");
-    soundManager.destroySound("sound");
   }
 
   play(){
 		soundManager.play("sound");
+    this.currentIconState = "pause";
   }
 
   pause(){
 		soundManager.pause("sound");
+    this.currentIconState = "play";
   }
 
   next(){
@@ -102,9 +107,11 @@ export class ChillPage {
       this.playTrack++;
     }
     this.track = this.tracks[this.playTrack];
-    this.loadAndPlay(this.track.id);
+    this.load(this.track.id);
+    this.play();
     this.trackColor="#000";
     this.giveMeColors(this.track.artwork_url);
+    this.currentIconState = "pause";
   }
 
   prev(){
@@ -117,9 +124,11 @@ export class ChillPage {
       this.playTrack--;
     }
     this.track = this.tracks[this.playTrack];
-    this.loadAndPlay(this.track.id);
+    this.load(this.track.id);
+    this.play();
     this.trackColor="#000";
     this.giveMeColors(this.track.artwork_url);
+    this.currentIconState = "pause";
   }
 
 

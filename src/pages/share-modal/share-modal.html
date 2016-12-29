@@ -1,8 +1,8 @@
-<ion-content padding (click)="close()" [style.background-color]="backgroudcolor">
+<ion-content padding [style.background-color]="backgroudcolor">
 <ion-grid>
   <ion-row text-center>
     <ion-col>
-      <img class="artwork" src="{{track.artwork_url}}">
+      <img class="artwork" (click)="close()" src="{{track.artwork_url}}">
     </ion-col>
   </ion-row>
 </ion-grid>
@@ -10,10 +10,18 @@
 <ion-grid>
   <ion-row>
     <ion-col>
-      <b><a [style.color]="textcolor" href="{{track.permalink_url">Soundcloud <ion-icon name="link"></ion-icon></a></b>
-      <b><p [style.color]="textcolor">Share</p></b>
-      <ion-icon [style.color]="textcolor" name="logo-facebook"></ion-icon>
-      <ion-icon [style.color]="textcolor" name="logo-twitter"></ion-icon>
+      <b><a [style.color]="textcolor" href="{{track.permalink_url}}">Soundcloud</a></b>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <b><a *ngIf="purchase" [style.color]="textcolor" href="{{track.purchase_url}}">Buy</a></b>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon [style.color]="textcolor" (click)="facebook()" name="logo-facebook"></ion-icon>
+      <ion-icon [style.color]="textcolor" (click)="twitter()" name="logo-twitter"></ion-icon>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -1,5 +1,6 @@
 <ion-content padding text-center>
 <h1>Culture Concorde</h1>
-<p>{{message}}</p>
+<div [innerHTML]="message"></div>
+<button *ngIf="display_ready_to_start" ion-button outline (click)="startApp()">Start App</button>
 <button *ngIf="display_reload_button" ion-button outline (click)="loadSoundcloudData()">Try Again</button>
 </ion-content>

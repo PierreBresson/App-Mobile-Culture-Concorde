@@ -1,10 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Deep & Tech playlist</ion-title>
+    <ion-title>{{header}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <song-details [song]="track" [dynamicColor]="trackColor" (click)="openMinimalPlayer()"></song-details>
-  <player (controls)=action($event)></player>
+  <player (controls)=action($event) [icon]="currentIconState"></player>
 </ion-content>

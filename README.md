@@ -18,10 +18,7 @@ CC is not stable at all at the moment. WIP :)
 
 ### To do list
 
- * Fix bugsss
  * Improve performance
- * Implement share buttons
- * Add buy song link on share screen
  * Android look
  * Reduce artwork size when phone screen is not 16:9
  * ...

@@ -63,6 +63,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
 										this.playlistChillwave.push(track);
@@ -108,6 +109,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
 										this.playlistFunkyHouse.push(track);
@@ -151,6 +153,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
 										this.playlistDeepAndTech.push(track);
@@ -194,6 +197,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
 										this.playlistMixtapes.push(track);

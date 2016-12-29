@@ -1,32 +1,23 @@
 page-share-modal {
   .artwork {
+    margin-top: 15px;
     border-radius: 2%;
   }
   a {
-    font-size: 2em;
+    font-size: 2.6em;
     text-decoration: none;
-    margin-top: 8px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     color: #000;
   }
-  a {
-    ion-icon {
-      font-size: 0.9em;
-    }
-  }
   p {
-    font-size: 2em;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-  p {
-    ion-icon {
-      font-size: 0.9em;
-    }
+    font-size: 2.6em;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   ion-icon {
     display: inline-block;
-    font-size: 3em;
-    margin-right: 0.4em;
+    font-size: 3.9em;
+    margin-right: 0.6em;
   }
 }
