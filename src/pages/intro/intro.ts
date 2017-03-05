@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { Observable } from 'rxjs/Rx';
 
@@ -18,13 +18,18 @@ export class IntroPage {
   public display_ready_to_start: boolean;
   public playlist: any;
 
-  constructor(public nav: NavController, private soundcloudfetcher: SoundcloudFetcher) {
+  constructor(public nav: NavController, private soundcloudfetcher: SoundcloudFetcher, public toastCtrl: ToastController) {
     this.display_reload_button = false;
     this.display_ready_to_start = false;
-    this.message = "App loading, make sure you have internet.";
   }
 
   ionViewDidLoad() {
+    let toast = this.toastCtrl.create({
+      message: 'App loading, make sure you have internet.',
+      duration: 3000,
+      position: 'top'
+    });
+    toast.present();
     this.loadSoundcloudData();
   }
 
@@ -41,19 +46,29 @@ export class IntroPage {
       .subscribe(playlist => {
         this.playlist = playlist;
         this.display_ready_to_start = true;
-        this.message = "App is ready! <br><br> To share a song, click on the artwork. <br> Click again to close.<br><br>";
+        this.message = "";
       }, error => {
         this.display_reload_button = true;
-        this.message = "Oups, can't handle the data.";
+        let toast = this.toastCtrl.create({
+          message: "Oups, can't handle the data.",
+          duration: 3000,
+          position: 'top'
+        });
+        toast.present();
       });
     }, err => {
       this.display_reload_button = true;
-      this.message = "Oups, can't reach Soundcloud server.";
+      let toast1 = this.toastCtrl.create({
+          message: "Oups, can't reach Soundcloud server.",
+          duration: 3000,
+          position: 'top'
+        });
+        toast1.present();
     });
   }
 
   startApp(){
-    this.nav.push(TabsPage,this.playlist);
+    this.nav.setRoot(TabsPage,this.playlist);
   }
 
 }

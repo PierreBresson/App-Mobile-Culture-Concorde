@@ -1,5 +1,10 @@
-<ion-content padding [style.background-color]="backgroudcolor">
+<ion-content padding [style.background-color]="backgroudcolor" class="no-scroll">
 <ion-grid>
+  <ion-row text-center>
+    <ion-col>
+      <ion-icon class="close" [style.color]="textcolor" (click)="close()" name="ios-close-circle-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
   <ion-row text-center>
     <ion-col>
       <img class="artwork" (click)="close()" src="{{track.artwork_url}}">
@@ -20,8 +25,8 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-icon [style.color]="textcolor" (click)="facebook()" name="logo-facebook"></ion-icon>
-      <ion-icon [style.color]="textcolor" (click)="twitter()" name="logo-twitter"></ion-icon>
+      <ion-icon class="social" [style.color]="textcolor" (click)="facebook()" name="logo-facebook"></ion-icon>
+      <ion-icon class="social" [style.color]="textcolor" (click)="twitter()" name="logo-twitter"></ion-icon>
     </ion-col>
   </ion-row>
 </ion-grid>

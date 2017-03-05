@@ -3,9 +3,32 @@ song-details {
     box-shadow: 0px 8px 20px 5px rgba(0, 0, 0, 0.3); 
     border-radius: 2%;
   }
+  ion-col {
+    padding-top: 0px;
+  }
+  .item-ios.item-block .item-inner{
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .item-ios {
+    background-color: transparent;
+    padding-left: 0px;
+  }
+  .range-md {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  .range-md.range-has-pin {
+    padding-top: 10px;
+  }
   p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-top: 8px;
     margin-bottom: 5px;
   }
+
 }

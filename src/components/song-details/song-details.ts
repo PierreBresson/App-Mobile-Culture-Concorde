@@ -9,8 +9,21 @@ export class SongDetailsComponent {
 
   @Input() song: any;
   @Input() dynamicColor;
+  @Input() size: any;
+  @Input() time:number;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(){
+    if(this.size){
+      console.log(this.size);
+    } else{
+      this.size = "1000";
+    }
+    console.log(this.song.duration);
+  }
+
+  displayLoadingImage(){
   }
 
 }

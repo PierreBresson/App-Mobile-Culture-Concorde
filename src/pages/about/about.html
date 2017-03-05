@@ -1,47 +1,41 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      A propos
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-
 <ion-content>
   <ion-grid>
+    <ion-row no-padding>
+      <div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+        <div class='title'>Culture<br><br>Concorde</div>
+      </div>
+    </ion-row>
 
-    <ion-card>
-      <img src="assets/data/artwork.jpg"/>
-      <ion-card-content>
-        <ion-card-title>
-          Behind the scene
-        </ion-card-title>
-        <p>App made by <a href="http://pierrrebresson.com">Pierre Bresson</a>.</p>
-      </ion-card-content>
-      
-      <ion-row no-padding>
-        <ion-col>
-          <button ion-button clear small color="danger" icon-left>
-            <ion-icon name='star'></ion-icon>
-            Rate App
-          </button>
-        </ion-col>
-        <ion-col text-center>
-          <button ion-button clear small color="danger" icon-left>
-            <ion-icon name='musical-notes'></ion-icon>
-            Soundcloud
-          </button>
-        </ion-col>
-        <ion-col text-right>
-          <button ion-button clear small color="danger" icon-left>
-            <ion-icon name='share-alt'></ion-icon>
-            Share
-          </button>
-        </ion-col>
-      </ion-row>
+  <ion-row padding>
+    <p>This is an experimental app.<br><br>
+    There is also a MacOS version of <a href="http://cultureconcorde.com">Culture Concorde</a>.<br><br>
+    This app streams audio so make sure to have a good internet connection.<br><br>
+    This app is free so any review on the app store is encouraging :)</p>
+  </ion-row>
 
-    </ion-card>
-
+  <ion-row no-padding>
+    <ion-col>
+      <button ion-button clear small icon-left>
+        <ion-icon name='link'></ion-icon>
+        <a href="http://pierrebresson.com">Author</a>
+      </button>
+    </ion-col>
+    <ion-col text-center>
+      <button ion-button clear small icon-left>
+        <ion-icon name='logo-github'></ion-icon>
+        <a href="https://github.com/PierreBresson">Code</a>
+      </button>
+    </ion-col>
+    <ion-col text-right>
+      <button ion-button clear small icon-left>
+        <ion-icon name='mail'></ion-icon>
+        <a href="mailto:contact@cultureconcorde.com?Subject=Hello%20Culture%20Concorde">Contact</a>
+      </button>
+    </ion-col>
+  </ion-row>
 
   </ion-grid>
 </ion-content>

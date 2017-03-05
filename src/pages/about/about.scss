@@ -1,0 +1,81 @@
+page-about {
+    ion-icon {
+        color: #185A9D;
+        font-size: 5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #185B9D;
+    }
+    .box {
+    margin-top: 15px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    //box-shadow: 0 2px 30px rgba(black, .2);
+    background: lighten(white, 10%);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    }
+
+    .wave {
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    background: #43CDA2;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 7000ms infinite linear;
+    }
+
+    .wave.-three {
+    animation: drift 9000ms infinite linear;
+    }
+
+    ion-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(#185A9D, 1), rgba(#def, 0) 80%, rgba(white, 1.0));
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+    }
+
+    .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: 80px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 24px;
+    text-shadow: 0 1px 0 rgba(black, .1);
+    text-indent: .3em;
+    }
+    @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+    }
+}

@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <song-details [song]="track" [dynamicColor]="trackColor" (click)="openMinimalPlayer()"></song-details>
+<ion-content padding class="no-scroll">
+  <song-details [song]="track" [time]="currentTime" [size]="width" [dynamicColor]="trackColor" (click)="openShare()"></song-details>
   <player (controls)=action($event) [icon]="currentIconState"></player>
 </ion-content>

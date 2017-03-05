@@ -1,6 +1,13 @@
-<ion-content padding text-center>
-<h1>Culture Concorde</h1>
-<div [innerHTML]="message"></div>
-<button *ngIf="display_ready_to_start" ion-button outline (click)="startApp()">Start App</button>
-<button *ngIf="display_reload_button" ion-button outline (click)="loadSoundcloudData()">Try Again</button>
+<ion-content padding class="no-scroll grad" text-center>
+
+    <h1>Culture Concorde</h1>
+
+    <p>Discover incredible songs, carefully selected, crafted in a minimalist design.<br></p>
+
+<div [innerHTML]="message" class="alert"></div>
 </ion-content>
+
+<ion-footer class="grad" padding>
+<button *ngIf="display_ready_to_start" ion-button full bottom round color="light" (click)="startApp()">Start App</button>
+<button *ngIf="display_reload_button" ion-button full round color="light" (click)="loadSoundcloudData()">Try Again</button>
+</ion-footer>

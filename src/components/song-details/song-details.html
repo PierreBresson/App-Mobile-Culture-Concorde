@@ -1,12 +1,18 @@
 <ion-grid>
   <ion-row text-center>
     <ion-col>
-      <img class="artwork" src="{{song.artwork_url}}">
+      <img [width]="size" class="artwork" src="{{song.artwork_url}}" (load)="displayLoadingImage()">
     </ion-col>
   </ion-row>
 </ion-grid>
 
 <ion-grid>
+  <ion-row>
+    <ion-item>
+      <ion-range min="0" mode="md" disabled="yes" [(ngModel)]="time">
+      </ion-range>
+    </ion-item>
+  </ion-row>
   <ion-row text-center>
     <ion-col>
       <b><p>{{song.artist | truncate }}</p></b>

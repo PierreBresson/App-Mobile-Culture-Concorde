@@ -14,6 +14,7 @@ import { PlayerComponent } from '../components/player/player';
 import { SongDetailsComponent } from '../components/song-details/song-details';
 
 import { TruncatePipe } from '../pipes/truncate';
+import { DurationPipe } from '../pipes/duration';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TruncatePipe } from '../pipes/truncate';
     PlayerComponent,
     SongDetailsComponent,
     IntroPage,
-    TruncatePipe
+    TruncatePipe,
+    DurationPipe
   ],
   imports: [
     IonicModule.forRoot(MyApp)

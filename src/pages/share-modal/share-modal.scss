@@ -1,23 +1,48 @@
 page-share-modal {
+  .no-scroll .scroll-content{
+      overflow: hidden;
+  }
   .artwork {
-    margin-top: 15px;
     border-radius: 2%;
   }
   a {
-    font-size: 2.6em;
+    font-size: 1.9em;
     text-decoration: none;
     margin-top: 15px;
     margin-bottom: 15px;
     color: #000;
   }
   p {
-    font-size: 2.6em;
+    font-size: 1.9em;
     margin-top: 15px;
     margin-bottom: 15px;
   }
   ion-icon {
     display: inline-block;
-    font-size: 3.9em;
+    font-size: 3.0em;
+  }
+  .social {
     margin-right: 0.6em;
+  }
+  .close {
+    font-size: 2.5em;
+  }
+  @media screen and (min-width: 350px) {
+    a {
+      font-size: 2.6em;
+      text-decoration: none;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+    p {
+      font-size: 2.6em;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    ion-icon {
+      display: inline-block;
+      font-size: 3.9em;
+    }
   }
 }

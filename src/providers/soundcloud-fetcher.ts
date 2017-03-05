@@ -63,6 +63,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											duration:dataPlaylist[j]["duration"],
 											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
@@ -109,6 +110,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											duration:dataPlaylist[j]["duration"],
 											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
@@ -153,6 +155,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											duration:dataPlaylist[j]["duration"],
 											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};
@@ -197,6 +200,7 @@ export class SoundcloudFetcher {
 											title: dataPlaylist[j]["title"],
 											artwork_url: dataPlaylist[j]["artwork_url"].replace("large.jpg", "t500x500.jpg"),
 											permalink_url: dataPlaylist[j]["permalink_url"],
+											duration:dataPlaylist[j]["duration"],
 											purchase_url : dataPlaylist[j]["purchase_url"],
 											artist: dataPlaylist[j]["user"]["username"]
 										};

@@ -1,6 +1,6 @@
 # Culture Concorde
 
-This is the mobile version of Culture Concorde, a free music player, crafted in a minimalist design. There is also a [macOS app](https://github.com/PierreBresson/App-MacOS-Culture-Concorde) and here is Culture Concorde [website](http://cultureconcorde.com/).
+This is the mobile version of Culture Concorde, a free music player, crafted in a minimalist design. There is also a [macOS app](https://github.com/PierreBresson/App-MacOS-Culture-Concorde) and Culture Concorde website is [here](http://cultureconcorde.com/).
 
 The app is based on ionic 2, written in typescript and will be available for iPhone and Android.
 
@@ -12,9 +12,6 @@ The app is based on ionic 2, written in typescript and will be available for iPh
 
 CC retrieves some playlists from soundcloud and plays randomly a song. You can share the song on Twitter or Facebook and jump to soundcloud.
 
-### Caution
-
-CC is not stable at all at the moment. WIP :)
 
 ### To do list
 
