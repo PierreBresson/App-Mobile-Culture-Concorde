@@ -17,7 +17,6 @@ CC retrieves some playlists from soundcloud and plays randomly a song. You can s
 
  * Improve performance
  * Android look
- * Reduce artwork size when phone screen is not 16:9
  * ...
 
 
